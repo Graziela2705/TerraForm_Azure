@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   terraform:
-    name: Criar infraestrutura no Azure
+    name: Validar e planejar infraestrutura no Azure
     runs-on: ubuntu-latest
 
     env:
@@ -47,6 +47,3 @@ jobs:
 
       - name: Planejar infraestrutura
         run: terraform plan -input=false
-        
-      - name: Aplicar Terraform
-        run: terraform apply -input=false -auto-approve
